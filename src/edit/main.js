@@ -38,7 +38,7 @@ import { defineMIME, defineMode } from "../modes.js"
 // Extra arguments are stored as the mode's dependencies, which is
 // used by (legacy) mechanisms like loadmode.js to automatically
 // load a mode. (Preferred mechanism is the require/define calls.)
-CodeMirror.defineMode = function(name/*, mode, …*/) {
+CodeMirror.defineMode = function(name/*, mode, */) {
   if (!CodeMirror.defaults.mode && name != "null") CodeMirror.defaults.mode = name
   defineMode.apply(this, arguments)
 }
